@@ -1,0 +1,16 @@
+{
+  //预设语法转义器。主要对javascript最新的语法糖进行编译，并不负责转译javascript新增的api和全局对象。例如let/const就可以被编译，而includes/Object.assign等并不能被编译
+  "presets": [
+    "@babel/preset-env",
+    "@babel/typescript",
+    "@vue/babel-preset-jsx"
+  ],
+  //插件
+  "plugins": [
+    "@babel/plugin-transform-modules-amd",
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/proposal-object-rest-spread",
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["@babel/proposal-class-properties", { "loose": true }]
+  ]
+}

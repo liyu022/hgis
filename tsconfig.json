@@ -1,0 +1,60 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ],
+    "module": "esnext",
+    "target": "esnext",
+    "jsx": "preserve",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "experimentalDecorators": true,
+    "declaration": false,
+    "noLib": false,
+    "preserveConstEnums": true,
+    "noEmit": true,
+    
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noEmitOnError": false,
+    "noUnusedLocals": true,
+    "importHelpers": true,
+    "skipLibCheck": true
+  },
+  "paths": {
+    "@/*": [
+      "src/*"
+    ]
+  },
+  "types": [
+    "arcgis-js-api",
+    "moment"
+  ],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.tsx"
+  ]
+}
+//tsconfig.json 所包含的属性并不多，只有 7 个，ms 官方也给出了它的定义文件。但看起来并不怎么舒服，这里就翻译整理一下
+//files: 数组类型，用于表示由 ts 管理的文件的具体文件路径
+//exclude: 数组类型，用于表示 ts 排除的文件（2.0 以上支持 Glob）
+//include: 数组类型，用于表示 ts 管理的文件（2.0 以上）
+//compileOnSave: 布尔类型，用于 IDE 保存时是否生成编译后的文件
+//extends: 字符串类型，用于继承 ts 配置，2.1 版本后支持
+//compilerOptions: 对象类型，设置编译的选项，不设置则使用默认配置，配置项比较多，后面再列
+//typeAcquisition: 对象类型，设置自动引入库类型定义文件(.d.ts)相关，该对象下面有 3 个子属性分别是：
+//enable: 布尔类型，是否开启自动引入库类型定义文件(.d.ts)，默认为 false
+//include: 数组类型，允许自动引入的库名，如：["jquery", "lodash"]
+//exculde: 数组类型，排除的库名
+//如不设定 files 和 include，ts 默认是 exclude 以外的所有的以 .ts 和 .tsx 结尾的文件。如果，同时设置 files 的优先级最高，exclude 次之，include 最低。
+//
+//上面都是文件相关的，编译相关的都是靠 compilerOptions 设置的，接着就来看一看。
