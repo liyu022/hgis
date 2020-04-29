@@ -6,12 +6,12 @@ import Expand from 'esri/widgets/Expand';
 import Legend from 'esri/widgets/Legend';
 
 const tilelayer = new TileLayer({
-    url: "http://113.140.66.226:33225/arcgis/rest/services/TDTSxBaseMap_XX/MapServer"
+    url: 'http://113.140.66.226:33225/arcgis/rest/services/TDTSxBaseMap_XX/MapServer'
 });
 const baseLayers: Array<Layer> = [tilelayer];
 
 export const map = new Map({
-    basemap:{ baseLayers: baseLayers }
+    basemap: { baseLayers: baseLayers }
 });
 
 export const view = new MapView({

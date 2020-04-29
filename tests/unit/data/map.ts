@@ -3,7 +3,7 @@
 const { describe, it } = intern.getPlugin("interface.bdd");
 const { expect } = intern.getPlugin("chai");
 
-import { initialize, view } from "../../../src/map";
+import { initialize, view } from "../../../src/data/map";
 
 describe("data/map", () => {
   describe("initialize", () => {

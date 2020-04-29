@@ -23,7 +23,7 @@
     "outDir": "./dist/",
     "sourceMap": true,
     "noEmitOnError": false,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "importHelpers": true,
     "skipLibCheck": true
   },
